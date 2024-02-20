@@ -1,4 +1,4 @@
-# Write your code here
+data = ['John Smith,20,Math,Physics', 'Jane Doe,21,Biology,Chemistry,Math']
 def process_data(string_data):
     result = dict()
     for x in string_data:
@@ -19,19 +19,14 @@ def courses(data):
             result.add(course)
     return result
 
-def most_common_courses(data):
+def most_common_course(data):
     map = dict()
-    result= set()
-    hoogste =0
-
     for v in data.values():
         for course in v['courses']:
             map.setdefault(course,1)
             map[course]+=1
-    for k,v in map.items():
-        if v>hoogste:
-            hoogste=v
-    for k,v in map.items():
-        if v==hoogste:
-            result.add(k)
-    return result
+    return map
+
+print(process_data(data))
+print(courses(process_data(data)))
+print(most_common_course(process_data(data)))
