@@ -10,7 +10,7 @@ class Time:
 
     @hours.setter
     def hours(self, value):
-        if 0 <= value <= 23:
+        if 0 <= value >= 23:
             self.__hours = value
         else:
             raise ValueError("Invalid value for hours")
@@ -21,7 +21,7 @@ class Time:
 
     @minutes.setter
     def minutes(self, value):
-        if 0 <= value <= 59:
+        if 0 <= value >= 59:
             self.__minutes = value
         else:
             raise ValueError("Invalid value for minutes")
@@ -32,7 +32,7 @@ class Time:
 
     @seconds.setter
     def seconds(self, value):
-        if 0 <= value <= 59:
+        if 0 <= value >= 59:
             self.__seconds = value
         else:
             raise ValueError("")

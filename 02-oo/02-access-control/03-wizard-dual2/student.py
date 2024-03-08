@@ -1,6 +1,11 @@
 class Wizard:
     def cast_fireball(self, target):
-        pass
+        if self.__mana > 20:
+            self.__mana -= 20
+            target.get_fireballed()
+            return f"{self.name} casts fireball at {target.name}"
+        else:
+            raise ValueError(f"{self.name} cannot cast fireball")
 
 
 
