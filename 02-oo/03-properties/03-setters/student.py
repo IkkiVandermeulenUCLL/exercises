@@ -14,7 +14,7 @@ class Time:
         if 0<=value<=23:
             self.__hours = value
         else:
-            raise ValueError("Je kkr moeder")
+            raise ValueError("Ai")
 
     @property
     def minutes(self):
@@ -25,7 +25,7 @@ class Time:
         if 0<=value<=59:
             self.__minutes = value
         else:
-            raise ValueError("Je kkr moeder")
+            raise ValueError("Ai")
 
     @property
     def seconds(self):
@@ -36,4 +36,4 @@ class Time:
         if 0<=value<=59:
             self.__seconds = value
         else:
-            raise ValueError("Je kkr moeder")
+            raise ValueError("Ai")
